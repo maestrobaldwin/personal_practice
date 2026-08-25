@@ -17,12 +17,12 @@ console.log(largeName);
 let myNames = ['Taylor', 'Tim', 'Olivia', 'Melissa', 'Owen', 'Tina', 'Tonya', 'Mark', 'Fran', 'Courtney', 'Titus'];
 
 let tNames = (array => {
-  return array.reduce((filteredNames, orgName) => {
-    if (orgName[0] === 'T') {
-      filteredNames.push(orgName);
-    } [];
-    return filteredNames;
+  return array.reduce((accumulator, element) => { //return the reduction
+    if (element[0] === 'O') {
+      accumulator.push(element);
+    } 
+    return accumulator; //return the accumulator
+  }, []); //initializer happens AFTER callback function, before arrow parametere final parenthesis
 });
-})
 
 console.log(tNames(myNames));
